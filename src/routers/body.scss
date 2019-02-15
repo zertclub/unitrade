@@ -1,0 +1,97 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+.sidedec{
+color: #262626;
+font-family: 'Advent Pro';
+transform: rotate(-90deg);
+display: flex;
+position: absolute;
+top: 50%;
+left: -13%;
+background: transparent;
+
+}
+.logoimage{
+    padding-top: 10%;
+    padding-left: 10%;
+    height: 30%;
+    width: 30%;
+    
+}
+.services{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 5.5%;
+    margin-right: 10%;
+    height: 40%;
+    width: 20%;
+    border: solid;
+    border-color: #565656;
+    border-radius: 20px;
+    min-height: 40%;
+    min-width: 35%;    
+    background:  transparent;
+    display: flex;
+    flex-direction: column;
+
+    
+    
+}
+.exchange{
+margin: 10%;
+border: solid;
+border-color: #262626;
+color: #262626;
+background: transparent;
+align-items: center;
+max-width: 50%;
+}
+.charts{
+    margin: 10%;
+border: solid;
+background: transparent;
+align-items: center;
+max-width: 50%;
+border-color: #262626;
+color: #262626;
+
+}
+.analyze{
+    margin: 10%;
+    border: solid;
+    background: transparent;
+    align-items: center;
+    max-width: 50%;
+    border-color: #262626;
+color: #262626;
+overflow:hidden;
+}
+.analyze a:hover{
+    text-decoration: none;
+}
+.charts a:hover{
+    text-decoration: none;
+}
+.exchange a:hover{
+    text-decoration: none;
+}
+.analyze a:link{
+    color: #262626;
+
+}
+.exchange a:link{
+    color: #262626;
+
+}
+.charts a:link{
+    color: #262626;
+
+}
+p.a { 
+    word-spacing: 10px;
+    font-family: 'Aldrich';
+    color: #262626;
+}

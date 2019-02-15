@@ -1,0 +1,33 @@
+.side{
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    width: 10%;
+    background: orange;
+    display: flex;
+    flex-flow: column;
+    z-index: 200;
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+
+
+}
+.sideopen{
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    width: 10%;
+    background: orange;
+    display: flex;
+    flex-flow: column;
+    z-index: 200;
+    opacity: 1;
+    transform: translateX(-100%);
+}
+.parent{
+    height: 100%;
+    width: 100%;
+}
