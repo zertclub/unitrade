@@ -1,9 +1,35 @@
-.parent{
-    height: 100%;
-    width: 100%;
+.emailinput{
+    margin-top: 2%;
+    height: 450%;
+    width: 20%;
+    background: transparent;
+    border-radius: 20px;
+    border: solid;
+    border-color: #565656;
+    color: #565656;
+    padding: 10px 10px 10px 10px;
 }
-parent1{
-    height: 100%;
-    width: 100%;
-    display: flex;
+.passwordinput{
+    margin-top: 2%;
+    height: 450%;
+    width: 20%;
+    background: transparent;
+    border-radius: 20px;
+    border: solid;
+    border-color: #565656;
+    padding: 10px 10px 10px 10px;
+    color: #565656;
+
+}
+.signup{
+    margin-top: 2%;
+    height: 450%;
+    width: 20%;
+    background: transparent;
+    border-radius: 20px;
+    border: solid;
+    border-color: #565656;
+    padding: 10px 10px 10px 10px;
+    color: #565656;
+
 }
