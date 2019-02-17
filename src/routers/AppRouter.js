@@ -21,6 +21,7 @@ const AppRouter=() =>(
 <Route path ="/markets" component={about}/>
 <Route path ="/login" component={login}/>
 
+
 <Route  component={pagenotfound}/>
 </Switch>
 </BrowserRouter>

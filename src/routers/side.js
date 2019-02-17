@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter,Route,Switch,Link,NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import './side.scss';
 import './navbar.scss';
 
@@ -32,17 +32,16 @@ render()
       </nav>    
       </header>
       </div>
-      <div className={this.state.navbtnstate}>
+      <div className={this.state.navbtnstate} onClick={this.navdivclick}>
 <nav>
-   <ul>  
-      <li><img src="logo.png" className="navbtn" onClick={this.navbtnclick}/></li>
-      <li><NavLink to='./home'>Home</NavLink></li>   
-      <li><NavLink to="/exchnage">Exchange</NavLink></li>
-      <li><NavLink to="/analyze">Analyze</NavLink></li>
-      <li><NavLink to="/charts">Charts</NavLink></li>
-      <li><NavLink to="/about">About</NavLink></li>
-      <li><NavLink to="/policy">Policy</NavLink></li>
-
+   <ul>  <center>
+      <li><NavLink to='./home' className="navlinks" style={{ textDecoration: 'none' }}>Home</NavLink></li>   
+      <li><NavLink to="/exchnage" className="navlinks" style={{ textDecoration: 'none' }}>Exchange</NavLink></li>
+      <li><NavLink to="/analyze" className="navlinks" style={{ textDecoration: 'none' }}>Analyze</NavLink></li>
+      <li><NavLink to="/charts" className="navlinks" style={{ textDecoration: 'none' }}>Charts</NavLink></li>
+      <li><NavLink to="/about" className="navlinks" style={{ textDecoration: 'none' }}>About</NavLink></li>
+      <li><NavLink to="/policy" className="navlinks" style={{ textDecoration: 'none' }}>Policy</NavLink></li>
+      </center>
    </ul>
 </nav>
       </div>
