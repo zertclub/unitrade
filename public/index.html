@@ -22,11 +22,75 @@
   width: 100%;
   background :white;
 }
+.ana{
+display: none;
+}
 </style>
 
 </head>
 
 <body class="body">
+
+<div class="ana">
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/technicals/" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis for AAPL</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+    {
+    "showIntervalTabs": true,
+    "width": 425,
+    "colorTheme": "light",
+    "isTransparent": false,
+    "locale": "en",
+    "symbol": "NASDAQ:AAPL",
+    "interval": "1m",
+    "height": 450
+  }
+    </script>
+  </div>
+
+</div>
+
+
+
+
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "title": "S&P 500",
+      "proName": "INDEX:SPX"
+    },
+    {
+      "title": "Shanghai Composite",
+      "proName": "INDEX:XLY0"
+    },
+    {
+      "title": "EUR/USD",
+      "proName": "FX_IDC:EURUSD"
+    },
+    {
+      "title": "BTC/USD",
+      "proName": "BITFINEX:BTCUSD"
+    },
+    {
+      "title": "ETH/USD",
+      "proName": "BITFINEX:ETHUSD"
+    }
+  ],
+  "theme": "light",
+  "isTransparent": false,
+  "largeChartUrl": "http://localhost:8080/analysis",
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+  </div>
   <div id="app"></div>
   <script src="/bundle.js"></script>
 </body>

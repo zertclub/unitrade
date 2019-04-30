@@ -1,4 +1,5 @@
 import React from 'react';
+import Side from './side';
 import TradingViewWidget from 'react-tradingview-widget';
 
 
@@ -13,9 +14,9 @@ render(){
 
 
 <div>
+<Side />
 
 <TradingViewWidget symbol="NASDAQ:AAPL" />
-    
 </div>
 
 

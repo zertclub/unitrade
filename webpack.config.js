@@ -1,8 +1,6 @@
 const path = require('path');
-
 module.exports = {
   entry: './src/app.js',
- // entry: './reduxtest.js',
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
@@ -20,6 +18,8 @@ module.exports = {
         'sass-loader'
       ]
     },
+    { test: /\.html$/, loader: 'html-loader' }
+    ,
     {
       test: /\.(png|jpg|gif)$/,
       loader: 'url-loader'

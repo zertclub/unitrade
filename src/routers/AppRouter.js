@@ -23,6 +23,7 @@ const AppRouter=() =>(
 <Route path ="/markets" component={about}/>
 <Route path ="/login" component={login}/>
 <Route path ="/analysis" component={analysis}/>
+<Route path ="/home" component={home}/>
 <Route path ="/ticker" component={ticker}/>
 
 <Route  component={pagenotfound}/>

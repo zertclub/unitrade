@@ -37,10 +37,12 @@ render()
    <ul>  <center>
       <li><NavLink to='./home' className="navlinks" style={{ textDecoration: 'none' }}>Home</NavLink></li>   
       <li><NavLink to="/exchnage" className="navlinks" style={{ textDecoration: 'none' }}>Exchange</NavLink></li>
-      <li><NavLink to="/analyze" className="navlinks" style={{ textDecoration: 'none' }}>Analyze</NavLink></li>
+      <li><NavLink to="/analysis" className="navlinks" style={{ textDecoration: 'none' }}>Analyze</NavLink></li>
       <li><NavLink to="/charts" className="navlinks" style={{ textDecoration: 'none' }}>Charts</NavLink></li>
       <li><NavLink to="/about" className="navlinks" style={{ textDecoration: 'none' }}>About</NavLink></li>
       <li><NavLink to="/policy" className="navlinks" style={{ textDecoration: 'none' }}>Policy</NavLink></li>
+      <li><NavLink to="/login" className="navlinks" style={{ textDecoration: 'none' }}>SignUp</NavLink></li>
+
       </center>
    </ul>
 </nav>

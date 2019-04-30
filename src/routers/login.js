@@ -5,7 +5,6 @@ import Cut from  './cut.png';
 import Gbtn from './btn.png';
 import Side from './side';
 import GoogleLogin from 'react-google-login';
-import FacebookLogin from 'react-facebook-login';
 
 
 
