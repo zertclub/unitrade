@@ -9,10 +9,11 @@ right: 0;
   display: flex;
   padding: 1rem;
   font-family: 'Advent Pro';
-  align-content: center;
+  align-content: right;
   top :0;
   left: 0;
   z-index: 100;
+  justify-content: space-between;
 }
 .maindiv
 {

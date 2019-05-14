@@ -1,4 +1,6 @@
-import * as firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
 
 
 const config = {
@@ -10,6 +12,5 @@ const config = {
     messagingSenderId: "200018284315"
   };
   firebase.initializeApp(config);
-firebase.database().ref().set({
-    name: 'Muhammad Ahmad'
-})
+firebase.firestore().settings({timestampsInSnapshots : true});
+export default firebase;

@@ -1,7 +1,11 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import {connect} from 'react-redux';
+
 import './side.scss';
 import './navbar.scss';
+import SignedinLinks from './signedinLinks';
+import Notsignedinlinks from './notsignedinLinks';
 
 
 
@@ -19,33 +23,26 @@ constructor(props){
       
    }
 }
-
 render()
+
 {
+
+
+   const links = this.props.auth.uid ? <SignedinLinks/> : <Notsignedinlinks/>;
    return(
+      
       <div className="parent">
       <div className="maindiv">
       <header className="header">
       <nav className="navbar">
-      <h1>UNI TRADE</h1>
+      
       <img src="navbtn.png" className="navbtn" onClick={this.navbtnclick}/>
       </nav>    
       </header>
       </div>
       <div className={this.state.navbtnstate} onClick={this.navdivclick}>
-<nav>
-   <ul>  <center>
-      <li><NavLink to='./home' className="navlinks" style={{ textDecoration: 'none' }}>Home</NavLink></li>   
-      <li><NavLink to="/exchnage" className="navlinks" style={{ textDecoration: 'none' }}>Exchange</NavLink></li>
-      <li><NavLink to="/analysis" className="navlinks" style={{ textDecoration: 'none' }}>Analyze</NavLink></li>
-      <li><NavLink to="/charts" className="navlinks" style={{ textDecoration: 'none' }}>Charts</NavLink></li>
-      <li><NavLink to="/about" className="navlinks" style={{ textDecoration: 'none' }}>About</NavLink></li>
-      <li><NavLink to="/policy" className="navlinks" style={{ textDecoration: 'none' }}>Policy</NavLink></li>
-      <li><NavLink to="/login" className="navlinks" style={{ textDecoration: 'none' }}>SignUp</NavLink></li>
 
-      </center>
-   </ul>
-</nav>
+{links}
       </div>
 
       </div>
@@ -69,4 +66,11 @@ navdivclick(){
 }
 
 }
-export default side;
+
+
+const mapstatetoprops=(state)=>{
+   return{
+auth:state.firebase.auth
+   }
+}
+export default connect(mapstatetoprops)(side)

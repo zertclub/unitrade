@@ -15,10 +15,13 @@ class login extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            valueofemail:''
+            valueofemail:'',
+            valueofpwd:''
         }
         this.signupsubmit=this.signupsubmit.bind(this);
         this.responseGoogle=this.responseGoogle.bind(this);
+        this.handlesubmit=this.handlesubmit.bind(this);
+        this.handlechnage=this.handlechnage.bind(this);
     }
     
     signupsubmit(){
@@ -34,9 +37,21 @@ this.setState({
 })
 
 }
-    
 
-    
+
+handlechnage(e){
+    this.setState({
+        valueofpwd:e.target.value
+    })
+    console.log(this.state.valueofpwd);
+}
+
+handlesubmit(e) {
+
+    e.preventDefault();
+    console.log(this.state)
+
+}
     render()
     {
         return(
@@ -63,11 +78,13 @@ this.setState({
 
 <div>
         <center>
-         <input className="emailinput" name="email" type="email" placeholder="Email"  width="100%" value={this.state.valueofemail}></input><br/>
+            <form onSubmit={this.handlesubmit}>
+         <input className="emailinput" name="email" type="email" placeholder="Email"  width="100%" value={this.state.valueofemail} ></input><br/>
 
-         <input className="passwordinput" name="password" type="password" placeholder="Password"></input><br/>
+         <input className="passwordinput" name="password" type="password" placeholder="Password" onChange={this.handlechnage} value={this.state.valueofpwd}></input><br/>
 
-        <button className="signup" onClick={this.signupsubmit}>SignUp</button>
+        <button className="signup" type="submit">SignUp</button>
+        </form>
         </center>   
 </div>
 
