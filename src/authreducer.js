@@ -18,7 +18,18 @@ switch(action.type){
     case 'SIGNOUT_SUCCESS':
     console.log("signout");
     return state;
-    
+    case 'SIGNUP_SUCCESS':
+    console.log("signup sucess")
+    return{
+        ...state,
+        autherror:null
+    } 
+    case 'SIGNUP_NOT':
+    console.log("error");
+    return{
+        ...state,
+        autherror:action.err.message
+    }
     default:
     return state
 }

@@ -12,6 +12,14 @@ import dashboard from './dashboard';
 import signin from './signin';
 import signup from './signup';
 import createtransaction from './createtransaction';
+import news from './news';
+
+
+
+
+
+
+
 const pagenotfound = () =>(
         <div>
         <NavLink to ="/" activeClassName="is-active" exact={true}>go home</NavLink>
@@ -36,6 +44,8 @@ const AppRouter=() =>(
 <Route path ="/signin" component={signin}/>
 <Route path ="/signup" component={signup}/>
 <Route path ="/createtransaction" component={createtransaction}/>
+<Route path ="/news" component={news}/>
+
 
 
 

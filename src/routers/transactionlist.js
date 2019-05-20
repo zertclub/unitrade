@@ -17,8 +17,9 @@ super(props);
         return(
             <div>
             <label>{this.props.transaction.amount}</label><br/>
-            <label>{this.props.transaction.key}</label><br/>
+            <label>{this.props.transaction.type}</label><br/>
             <label>{this.props.transaction.status}</label><br/> 
+
           </div>
         );
     }

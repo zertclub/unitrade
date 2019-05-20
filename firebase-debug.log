@@ -1,0 +1,67 @@
+[debug] [2019-05-16T00:53:16.235Z] ----------------------------------------------------------------------
+[debug] [2019-05-16T00:53:16.239Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Zertgraphics\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2019-05-16T00:53:16.239Z] CLI Version:   6.9.2
+[debug] [2019-05-16T00:53:16.240Z] Platform:      win32
+[debug] [2019-05-16T00:53:16.240Z] Node Version:  v10.15.0
+[debug] [2019-05-16T00:53:16.241Z] Time:          Wed May 15 2019 17:53:16 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-16T00:53:16.241Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-16T00:53:16.253Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-16T00:53:16.255Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Zertgraphics\Desktop\unitrade
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2019-05-16T00:53:23.921Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?page_size=100  
+ 
+[debug] [2019-05-16T00:53:24.703Z] <<< HTTP RESPONSE 200
+[info] i  Using project unitrade-86cec (unitrade)
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with a Node.js
+[info] package pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2019-05-16T00:53:26.950Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-16T00:53:26.951Z] > authorizing via signed-in user
+[debug] [2019-05-16T00:53:26.951Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/unitrade-86cec  
+ 
+[debug] [2019-05-16T00:53:27.432Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-16T00:53:27.436Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/unitrade-86cec?updateMask=usageSettings  
+
+[debug] [2019-05-16T00:53:27.437Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/unitrade-86cec?updateMask=usageSettings  
+
+[debug] [2019-05-16T00:53:30.322Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-16T00:53:30.542Z] <<< HTTP RESPONSE 200
+[info] +  Wrote functions/package.json
+[info] +  Wrote functions/index.js
+[info] +  Wrote functions/.gitignore
+[info] 
+[error] NPM install failed, continuing with Firebase initialization...
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2019-05-16T00:55:41.713Z] >>> HTTP REQUEST GET https://www.gstatic.com/firebasejs/releases.json  
+ 
+[debug] [2019-05-16T00:55:41.727Z] Error: getaddrinfo ENOTFOUND www.gstatic.com www.gstatic.com:443
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:57:26)
+[error] 
+[error] Error: Server Error. getaddrinfo ENOTFOUND www.gstatic.com www.gstatic.com:443

@@ -1,32 +1,5 @@
 
-const initstate={
-    transactions:[
-        {
-        id:'1',    
-        amount:'200',
-         status:'pending',
-        key:'aklnsef83n889f3f983hf983hf98'},
-        
-        {
-            id:'2',
-            amount:'300',
-         status:'pending',
-        key:'aklnsef83n889f3f983hf983hu'},
-        
-        {
-            id:'3',
-            amount:'500',
-         status:'pending',
-        key:'aklnsef83n889f3f983hf983hf97'},
-        
-        {id:'4',
-        amount:'100',
-         status:'pending',
-        key:'aklnsef83n889f3f983hf9834'}
-        
-    ]
-};
-const transactionreducer=(state=initstate,action)=>{
+const transactionreducer=(state={},action)=>{
 
 
 switch(action.type){

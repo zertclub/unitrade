@@ -19,7 +19,7 @@ constructor(props){
    this.navdivclick=this.navdivclick.bind(this);
 
    this.state={
-      navbtnstate:'sideopen'
+      navbtnstate:'side'
       
    }
 }
@@ -33,12 +33,6 @@ render()
       
       <div className="parent">
       <div className="maindiv">
-      <header className="header">
-      <nav className="navbar">
-      
-      <img src="navbtn.png" className="navbtn" onClick={this.navbtnclick}/>
-      </nav>    
-      </header>
       </div>
       <div className={this.state.navbtnstate} onClick={this.navdivclick}>
 

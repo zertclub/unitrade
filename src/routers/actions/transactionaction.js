@@ -2,11 +2,13 @@ export const ecreatetransaction=(transaction)=>{
 return(dispatch,getState,{getFirebase,getFirestore})=>{
      
     const firestore=getFirestore();
+    const uid=getState().firebase.auth.uid;
     firestore.collection('transactions').add({
 
         amount:transaction.amount,
-        key:transaction.key,
+        key:uid,
         status:transaction.status,
+        type:transaction.type,
         time:new Date()
 
 

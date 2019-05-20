@@ -2,9 +2,16 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux';
 import {signIn} from './authactions';
 import Side from './side';
+import {Redirect} from 'react-router-dom';
  class signin extends Component {
   
+
+
+
+
+  
   constructor(props){
+    
       super(props);
      this.state={
          email:'',
@@ -25,11 +32,19 @@ e.preventDefault();
 console.log(this.state);
 this.props.signin(this.state);      }
     render() {
-      const {authError}=this.props
+      const {authError,auth}=this.props
+      if(auth.uid) return <Redirect to='/'/>
       return (
         
       <div>
         <Side/>
+
+          <div>
+            
+          </div>
+
+
+
           <form onSubmit={this.handlesubmit}>
           <label>Email</label><br/>
        
@@ -51,7 +66,8 @@ this.props.signin(this.state);      }
 
 const mapstatetoptops=(state)=>{
 return{
-  authError:state.auth.autherror
+  authError:state.auth.autherror,
+  auth:state.firebase.auth
 }
 }
 
