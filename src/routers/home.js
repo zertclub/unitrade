@@ -3,6 +3,7 @@ import Side from './side';
 import './home.scss';
 import { Component } from 'react';
 import Body from './body';
+import Footer from './footer';
 
 
 
@@ -24,6 +25,7 @@ constructor(props){
             <div className="maindiv">
             <Side />
             <Body/>
+            <Footer/>
             </div>
             
             

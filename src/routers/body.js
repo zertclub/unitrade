@@ -16,16 +16,13 @@ render()
         <div>
 
         <div className="parent">
-        <div className="sidedec">
-
-<p className="a">The New Way to Trade, Exchnage and Analyze</p>
-</div>
+     
             <img src='./logo.png' className="logoimage"/>
             <div className="services">
             <center>
-            <div className="exchange"><NavLink to="./exchange"><h1>Exchange</h1></NavLink></div>
-            <div className="charts"><NavLink to="./analysis"><h1>Analysis</h1></NavLink></div>
-            <div className="analyze"><NavLink to="./charts"><h1>Charts</h1></NavLink></div>
+            <div className="exchange"><NavLink to="./exchange"><h1 className="bodyh1">Exchange</h1></NavLink></div>
+            <div className="charts"><NavLink to="./analysis"><h1  className="bodyh1">Analysis</h1></NavLink></div>
+            <div className="analyze"><NavLink to="./charts"><h1  className="bodyh1">Charts</h1></NavLink></div>
             </center>
             </div>  
          

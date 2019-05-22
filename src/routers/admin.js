@@ -1,5 +1,4 @@
 import React from 'react';
-import Exchange from './exchange';
 import { type } from 'os';
 import {priceaction,updatestatus} from './actions/priceaction';
 import {connect} from 'react-redux';

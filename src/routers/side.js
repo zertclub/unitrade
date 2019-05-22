@@ -31,11 +31,13 @@ render()
    const links = this.props.auth.uid ? <SignedinLinks/> : <Notsignedinlinks/>;
    return(
       
-      <div className="parent">
-      <div className="maindiv">
+      <div className="">
+      <div className="">
       <header className="header">
       <nav className="navbar">
-      
+         <div className="sidelogodiv">
+      <NavLink to="./" className="navfont">UNI TRADE.</NavLink>
+      </div>
       <img src="navbtn.png" className="navbtn" onClick={this.navbtnclick}/>
       </nav>    
       </header>

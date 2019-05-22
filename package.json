@@ -10,6 +10,7 @@
     "dev-server": "webpack-dev-server"
   },
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
     "arraylist": "^0.1.0",
     "axios": "^0.18.0",
     "babel-cli": "6.24.1",
@@ -17,7 +18,7 @@
     "babel-loader": "7.1.1",
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.3.1",
     "coinmarketcap-api": "^3.0.1",
     "commentbox.io": "^2.0.0",
     "css-loader": "^2.1.0",
@@ -35,6 +36,7 @@
     "react-bootstrap-dropdown-menu": "^1.1.15",
     "react-dom": "^16.8.6",
     "react-google-login": "^5.0.2",
+    "react-iframe": "^1.8.0",
     "react-redux": "^5.0.6",
     "react-redux-firebase": "^2.2.6",
     "react-render-html": "^0.6.0",

@@ -5,7 +5,6 @@ import home from './home';
 import login from './login';
 import analysis from './analysis';
 import ticker from './ticker';  
-import exchange from './exchange';
 import admin from './admin';
 import transactionlist from './transactionlist';
 import dashboard from './dashboard';
@@ -13,6 +12,8 @@ import signin from './signin';
 import signup from './signup';
 import createtransaction from './createtransaction';
 import news from './news';
+import test from './test';
+
 
 
 
@@ -33,7 +34,6 @@ const AppRouter=() =>(
 <Switch>
 <Route path ="/" component={home} exact={true}/>
 <Route path ="/about" component={about}/>
-<Route path ="/exchange" component={exchange}/>
 <Route path ="/markets" component={about}/>
 <Route path ="/login" component={login}/>
 <Route path ="/analysis" component={analysis}/>
@@ -45,6 +45,7 @@ const AppRouter=() =>(
 <Route path ="/signup" component={signup}/>
 <Route path ="/createtransaction" component={createtransaction}/>
 <Route path ="/news" component={news}/>
+<Route path ="/test" component={test}/>
 
 
 

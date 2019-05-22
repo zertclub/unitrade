@@ -1,14 +1,16 @@
-import React from 'react';
-import Side from './side';
-import TradingViewWidget from 'react-tradingview-widget';
-import commentBox from 'commentbox.io';
+import React, { Component } from 'react';
+import Iframe from 'react-iframe';
 import './analysis.scss';
+import Side from './side';
+import commentBox from 'commentbox.io';
 
 
 
 
-class analysis extends React.Component{
 
+export default class test extends Component {
+ 
+ 
     componentDidMount() {
 
         this.removeCommentBox = commentBox('5764903193280512-proj');
@@ -19,25 +21,22 @@ class analysis extends React.Component{
         this.removeCommentBox();
     }
 
-render(){
-    return(
-
-
-<div>
-<Side />
-
-<TradingViewWidget symbol="NASDAQ:AAPL" />
-
-<div className="commentbox" />
-
-</div>
-
-
-    );
+    render() {
+    return (
+        
+      <div className="anaiframe">
+          <Side/>
+        <Iframe url="http://unitrade.zert.club/chart.html"
+        width="100%"
+        height="100%"
+        id="myId"
+        className="anaiframe1"
+        display="initial"
+        allow="fullscreen"
+      frameBorder="0"
+position="relative"/>
+ <div className="commentbox" /> 
+      </div>
+    )
+  }
 }
-
-
-
-
-}
-export default analysis

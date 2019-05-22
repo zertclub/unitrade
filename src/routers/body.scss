@@ -24,7 +24,7 @@ background: transparent;
 }
 .services{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 5.5%;
+    margin-top: 2%;
     margin-right: 10%;
     height: 40%;
     width: 20%;
@@ -48,6 +48,7 @@ color: #262626;
 background: transparent;
 align-items: center;
 max-width: 50%;
+min-width: 0%;
 }
 .charts{
     margin: 10%;
@@ -79,19 +80,57 @@ overflow:hidden;
     text-decoration: none;
 }
 .analyze a:link{
-    color: #262626;
-
+    font-family: 'Raleway', sans-serif;
+    color: #565656;
 }
 .exchange a:link{
-    color: #262626;
-
+    font-family: 'Raleway', sans-serif;
+    color: #565656;
 }
 .charts a:link{
-    color: #262626;
-
+    font-family: 'Raleway', sans-serif;
+    color: #565656;
 }
 p.a { 
     word-spacing: 10px;
     font-family: 'Aldrich';
     color: #262626;
 }
+.bodyh1{
+    font-family: 'Raleway', sans-serif;
+    color: #565656;
+    font-size: 150%;
+    
+}
+@media only screen and (min-width: 701px) {
+    .bodyh1{
+        font-family: 'Raleway', sans-serif;
+        color: #565656;
+        font-size: 150%;
+        
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .bodyh1{
+        font-family: 'Raleway', sans-serif;
+        color: #565656;
+        font-size: 100%;
+        
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    .bodyh1{
+        font-family: 'Raleway', sans-serif;
+        color: #565656;
+        font-size: 200%;
+        
+    }
+  }
+  @media only screen and (min-width: 1500px) {
+    .bodyh1{
+        font-family: 'Raleway', sans-serif;
+        color: #565656;
+        font-size: 300%;
+        
+    }
+  }
