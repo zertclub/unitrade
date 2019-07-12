@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {signIn} from './authactions';
 import Side from './side';
 import {Redirect} from 'react-router-dom';
+import './signin.scss';
+import Footer from './footer';
  class signin extends Component {
   
 
@@ -38,26 +40,28 @@ this.props.signin(this.state);      }
         
       <div>
         <Side/>
+        <center>
 
-          <div>
+          <div className="siparent">
             
-          </div>
-
+         
 
 
           <form onSubmit={this.handlesubmit}>
-          <label>Email</label><br/>
        
-        <input  type="email" id="email" onChange={this.handlechange}></input><br/>
-        <label>Email</label><br/>
-        <input  type="password"  id="password"onChange={this.handlechange}></input><br/>
+        <input placeholder="Email" className="siinput" type="email" id="email" onChange={this.handlechange}></input><br/>
+        <input placeholder="Password" className="siinput" type="password"  id="password"onChange={this.handlechange}></input><br/>
         
         
-        <button>Login</button>
+        <button className="sibtn">Login</button>
 
         {authError?<p>there is an authentication error</p>:null}
 
         </form>
+
+        </div>
+        </center>
+        <Footer/>
       </div>
     )
   }

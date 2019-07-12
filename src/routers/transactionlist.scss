@@ -1,9 +1,3 @@
-.updatemodaldivhidden{
-    display: none;
-}
-.updatemodaldivshown{
-    display: block;
-}
 .tlparent{
     background: #e0e0e023;
     border-radius: 20px;
@@ -59,21 +53,4 @@ justify-content: center;
     display: flex;
     justify-content: space-around;
 
-}
-.adbtn{
-    background: #565656;
-    border-radius: 20px;
-    border: solid;
-    border-color: #565656;
-    color: white;
-    padding: 10px 10px 10px 10px;
-    text-align: center; 
-    display: flex;
-    width: 60%;
-justify-content: center;
-}
-.adh1{
-    font-family: 'Raleway', sans-serif;
-    color: #565656;
-    font-size: 200%; 
 }

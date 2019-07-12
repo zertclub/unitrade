@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-
+import './transactionlist.scss';
 
 
 class transactionlist extends Component{
@@ -15,11 +15,50 @@ super(props);
 
         console.log(this.props);
         return(
-            <div>
-            <label>{this.props.transaction.amount}</label><br/>
-            <label>{this.props.transaction.type}</label><br/>
-            <label>{this.props.transaction.status}</label><br/> 
+            <div className="">
+                <center>
+            <div className="tlparent">
+           
+            <div className="tllabelcontainer">            
+            <label className="tllabelheading">Amount</label>
+<label className="tllabel">{this.props.transaction.amount} $USD </label><br/>
+</div>
 
+
+            <div className="tllabelcontainer">       
+                   <label className="tllabelheading">Type</label>
+          <label className="tllabel">{this.props.transaction.type}</label><br/>
+
+</div>
+
+
+
+            <div className="tllabelcontainer">          
+                  <label className="tllabelheading">Status</label>
+        <label className="tllabel">{this.props.transaction.status}</label><br/> 
+
+</div>
+
+
+            <div className="tllabelcontainer">          
+                   <label className="tllabelheading">Date</label>
+       <label className="tllabel">{this.props.transaction.time}</label><br/> 
+
+</div>
+<div className="tllabelcontainer">
+
+<label className="tllabelheading">Amount in PKR</label>
+
+            <label className="tllabel">{this.props.transaction.amntinpkr} PKR</label><br/> 
+            </div>
+            <div className="tllabelcontainer">
+
+<label className="tllabelheading">Uniqe ID</label>
+
+            <label className="tllabel">{this.props.transaction.key}</label><br/> 
+            </div>
+            </div>
+            </center>
           </div>
         );
     }

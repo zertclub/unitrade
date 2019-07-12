@@ -2,16 +2,14 @@ import React from 'react';
 import { type } from 'os';
 import {priceaction,updatestatus} from './actions/priceaction';
 import {connect} from 'react-redux';
-import Transactionlist from './transactionlist';
 import {firestoreConnect} from 'react-redux-firebase';
 import {compose} from 'redux';
-import {Redirect} from 'react-router-dom';
 import './admin.scss';
-import  Updatetransactionmodal from './updatetransactionmodal';
 import './side.scss';
 import './navbar.scss';
-import SignedinLinks from './signedinLinks';
-import Notsignedinlinks from './notsignedinLinks';
+import Side from './side';
+import Footer from './footer';
+
 var arraylist = require("arraylist");
 
 
@@ -99,7 +97,9 @@ handlestatus(){
 handlesubmit(e){
     e.preventDefault();
     this.props.updateprice(this.state)
-        }
+alert('Rates Updated');     
+
+}
 
 
 
@@ -111,15 +111,19 @@ render(){
     console.log(transaction)
     return(     
 <div>      
+    <Side/>
    <form>
-        <input type="text" id="buy"  onChange={this.handlechange}>
-        </input>
-        <br/><br/><br/>
-        <input type="text" id="sell"  onChange={this.handlechange}>
+       <center>
+        <input className="tllabel" type="text" id="buy" placeholder="Buy Price in PKR" onChange={this.handlechange}>
         </input>
         <br/><br/>
-        <button onClick={this.handlesubmit}>Set price</button>
-   </form>
+        <input className="tllabel" type="text" id="sell" placeholder="Sell Price in PKR" onChange={this.handlechange}>
+        </input>
+        <br/><br/>
+        <button className="adbtn" onClick={this.handlesubmit}>Set price</button>
+        <h1 className="adh1">Pending Transactions</h1>
+        </center>
+   </form>  
 <div >
     
     { transaction && transaction.map((transaction) => {
@@ -128,7 +132,60 @@ render(){
        return (
             
             <div key={transaction.id}>
-            <form>
+           
+           <center>
+            <div className="tlparent">
+           
+            <div className="tllabelcontainer">            
+            <label className="tllabelheading">Amount</label>
+<label className="tllabel">{transaction.amount} $USD </label><br/>
+</div>
+
+
+            <div className="tllabelcontainer">       
+                   <label className="tllabelheading">Type</label>
+          <label className="tllabel">{transaction.type}</label><br/>
+
+</div>
+
+
+
+            <div className="tllabelcontainer">          
+                  <label className="tllabelheading">Status</label>
+        <label className="tllabel">{transaction.status}</label><br/> 
+
+</div>
+
+
+            <div className="tllabelcontainer">          
+                   <label className="tllabelheading">Date</label>
+       <label className="tllabel">{transaction.time}</label><br/> 
+
+</div>
+<div className="tllabelcontainer">
+
+<label className="tllabelheading">Amount in PKR</label>
+
+            <label className="tllabel">{transaction.amntinpkr} PKR</label><br/> 
+            </div>
+            <div className="tllabelcontainer">
+
+<label className="tllabelheading">Uniqe ID</label>
+
+            <label className="tllabel">{transaction.key}</label><br/> 
+            </div>
+            <center>
+            <button className="adbtn" onClick={this.handleupdate} id={transaction.id} value={transaction.id}>Update Status</button>
+            </center>
+            </div>
+
+            </center>
+           
+           
+           
+           
+           
+            {/* <form>
         <input type="text" id="updatedamount"  onChange={this.handlechange}>
         </input>
         <br/><br/><br/>
@@ -139,7 +196,7 @@ render(){
         </input>
         <br/><br/>
         <button onClick={this.handleupdate} id={transaction.id} value={transaction.id}>Update Status</button>
-   </form>
+   </form> */}
            
             </div>
         )
@@ -148,6 +205,7 @@ render(){
       <div>
           
           </div>
+          <Footer/>
 </div>
 
 

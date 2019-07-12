@@ -6,19 +6,18 @@ return(dispatch,getState,{getFirebase,getFirestore})=>{
     firestore.collection('transactions').add({
 
         amount:transaction.amount,
-        key:uid,
+        key:transaction.key,
         status:transaction.status,
         type:transaction.type,
-        time:new Date()
+        time:new Date().toLocaleDateString(),
+        uniqid:uid,
+        amntinpkr:transaction.amntinpkr
 
-
-    }).then(()=>{
-        dispatch({type:'ADD_TRANSACTION' ,transaction:transaction});
-    }).catch((err)=>{
-        dispatch({type:'ADD_TRANSACTION_ERROR' ,err});
-    })
-
-
-    
+    }).then(()=>{                          
+   dispatch({type:'ADD_TRANSACTION' ,transaction:transaction});
+}).catch((err)=>{
+ dispatch({type:'ADD_TRANSACTION_ERROR' ,err});
+  })
+                          
 }
 };

@@ -1,0 +1,98 @@
+.dparentdiv{
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    color: #565656;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+
+}
+.dloginemail{
+   
+    margin-top: 2%;
+    height: 450%;
+    width: 20%;
+    background: transparent;
+    border-radius: 20px;
+    border: solid;
+    border-color: #565656;
+    color: #565656;
+    padding: 10px 10px 10px 10px;
+    text-align: center; 
+    display: flex;
+justify-content: center;
+
+}
+.demailnamecontainer{
+    height: 450%;
+    width: 100%;
+    background: transparent;
+    border-radius: 20px;
+    border-color: #565656;
+    color: #565656;
+    padding: 10px 10px 10px 10px;
+    text-align: center; 
+    display: flex;
+justify-content: space-around;
+background: transparent;
+
+}
+.dh1{
+    font-family: 'Raleway', sans-serif;
+    color: #565656;
+    font-size: 100%;
+    background: transparent;
+
+}
+.dh2{
+    font-family: 'Raleway', sans-serif;
+    color: #565656;
+    font-size: 100%;
+    font-weight: bold;
+    background: transparent;
+
+}
+.dhr{
+    width: 70%;
+}
+.dfiltercontainer{
+ 
+    background: transparent;
+    border-radius: 20px;
+    border-color: #565656;
+    color: #565656;
+    padding: 10px 10px 10px 10px;
+    text-align: center; 
+    display: flex;
+justify-content: center;
+}
+.dfilter{
+    background: transparent;
+    border-radius: 20px;
+    border-color: #565656;
+    color: #565656;
+    padding: 10px 10px 10px 10px;
+    text-align: center; 
+    width: 10%;
+    margin-left: 1%;
+}
+.dfilter:hover{
+    background:  #565656;
+    border-radius: 20px;
+    border-color: #565656;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    text-align: center; 
+    width: 10%; 
+}
+.dfilter:focus{
+    background:  #565656;
+    border-radius: 20px;
+    border-color: #565656;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    text-align: center; 
+    width: 10%; 
+    outline: none;
+
+}

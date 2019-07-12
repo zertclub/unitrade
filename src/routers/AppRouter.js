@@ -13,7 +13,12 @@ import signup from './signup';
 import createtransaction from './createtransaction';
 import news from './news';
 import test from './test';
-
+import exchange from './exchange';
+import trade from './trade';
+import scanner from './scanner';
+import crossrates from './crossrates';
+import crypto from './crypto';
+import callender from './callender';
 
 
 
@@ -46,6 +51,15 @@ const AppRouter=() =>(
 <Route path ="/createtransaction" component={createtransaction}/>
 <Route path ="/news" component={news}/>
 <Route path ="/test" component={test}/>
+<Route path ="/exchange" component={exchange}/>
+<Route path ="/trade" component={trade}/>
+<Route path ="/scanner" component={scanner}/>
+<Route path ="/crossrates" component={crossrates}/>
+<Route path ="/crypto" component={crypto}/>
+<Route path ="/callender" component={callender}/>
+
+
+
 
 
 

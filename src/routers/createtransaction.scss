@@ -1,0 +1,72 @@
+.ctheading{
+    font-family: 'Raleway', sans-serif;
+    color: #565656;
+    font-size: 200%;
+}
+.ctheading1{
+    font-family: 'Raleway', sans-serif;
+    color: #565656;
+    font-size: 200%;
+}
+.ctinput{
+    height: 450%;
+    width: 80%;
+    background: transparent;
+    border-radius: 20px;
+    border: solid;
+    border-color: #565656;
+    color: #565656;
+    padding: 10px 10px 10px 10px;
+    text-align: center; 
+}
+.ctinput:focus{
+    height: 450%;
+    width: 80%;
+    background: transparent;
+    border-radius: 20px;
+    border: solid;
+    border-color: #565656;
+    color: #565656;
+    padding: 10px 10px 10px 10px;
+    text-align: center; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.ctdiv{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10%; 
+    border: solid;
+    border-color: #565656;
+    width: 30%;
+    padding-bottom: 4%;
+    padding-top: 4%;
+
+
+
+}
+.ctbtn{
+    height: 450%;
+    width: 80%;
+    background: #565656;
+    border-radius: 20px;
+    border: solid;
+    border-color: #565656;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    text-align: center; 
+}
+@media only screen and (max-width: 900px) {
+   
+    .ctdiv{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 10%; 
+        border: solid;
+        border-color: #565656;
+        width: 80%;
+        padding-bottom: 4%;
+        padding-top: 4%;
+    
+    
+    
+    }
+  }

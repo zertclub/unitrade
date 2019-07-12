@@ -1,7 +1,13 @@
 import React from 'react';
+import Side from './side';
+import Footer from './footer';
 
 const about = () =>(
-    <p>hello this is one</p>
+   <div>
+       <Side/>
+       <Footer/>
+
+       </div>
     );
 
 export default about;
