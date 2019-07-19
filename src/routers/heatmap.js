@@ -8,7 +8,7 @@ export class heatmap extends Component {
       <div>
           <Side/>
           <div className="tradeparent">
-        <Iframe url="http://unitrade.zert.club/heatmap.html"
+        <Iframe url="http://unitrade.zert.club/crossrates.html"
         width="100%"
         height="100%"
         id="myId"

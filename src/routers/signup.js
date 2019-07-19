@@ -46,8 +46,10 @@ console.log(this.props);
         <center>
         <div className="suparent">
           <form onSubmit={this.handlesubmit}>
-     
-        <input placeholder="Email" className="suinput" type="email" id="email" onChange={this.handlechange}></input><br/>
+        
+        <button className="subtn">Verify Your Email</button>
+        <br></br>
+        <input placeholder="Email"  className="suinput" type="email" id="email" onChange={this.handlechange}></input><br/>
         <input placeholder="Password" className="suinput" type="password"  id="password"onChange={this.handlechange}></input><br/>
         <input placeholder="First Name" className="suinput" type="text"  id="firstname"onChange={this.handlechange}></input><br/>
         <input placeholder="Last Name" className="suinput" type="text"  id="lastname"onChange={this.handlechange}></input><br/>

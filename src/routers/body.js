@@ -22,7 +22,7 @@ render()
             <center>
             <div className="exchange"><NavLink to="./exchange"><h1 className="bodyh1">Exchange</h1></NavLink></div>
             <div className="charts"><NavLink to="./analysis"><h1  className="bodyh1">Analysis</h1></NavLink></div>
-            <div className="analyze"><NavLink to="./charts"><h1  className="bodyh1">Charts</h1></NavLink></div>
+            <div className="analyze"><NavLink to="./trade"><h1  className="bodyh1">Trade</h1></NavLink></div>
             </center>
             </div>  
          

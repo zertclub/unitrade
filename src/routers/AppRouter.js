@@ -19,6 +19,7 @@ import scanner from './scanner';
 import crossrates from './crossrates';
 import crypto from './crypto';
 import callender from './callender';
+import heatmap from './heatmap';
 
 
 
@@ -57,6 +58,8 @@ const AppRouter=() =>(
 <Route path ="/crossrates" component={crossrates}/>
 <Route path ="/crypto" component={crypto}/>
 <Route path ="/callender" component={callender}/>
+<Route path ="/heatmap" component={heatmap}/>
+
 
 
 
