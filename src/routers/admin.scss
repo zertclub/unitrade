@@ -77,3 +77,30 @@ justify-content: center;
     color: #565656;
     font-size: 200%; 
 }
+.h{
+    display: none;
+}
+.true{
+    background: #358321;
+    border-radius: 20px;
+    border: solid;
+    border-color:  #358321;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    text-align: center; 
+    display: flex;
+    width: 60%;
+justify-content: center;
+}
+.false{
+    background: #D02B2B;
+    border-radius: 20px;
+    border: solid;
+    border-color:  #D02B2B;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    text-align: center; 
+    display: flex;
+    width: 60%;
+justify-content: center;
+}

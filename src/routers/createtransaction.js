@@ -20,7 +20,8 @@ import {compose} from 'redux';
          status:'pending',
          key:uuid(),
          type:'',
-         amntinpkr:''
+         amntinpkr:'',
+         bank:''
 
      }
       this.handlechange=this.handlechange.bind(this);
@@ -81,6 +82,7 @@ this.props.history.push(`/`)
           <input  type="text" className="ctinput" placeholder="'buy' for buying and 'sell' for selling" id="type"onChange={this.handlechange}></input><br/><br/>
 
         <input  type="text" className="ctinput" placeholder="Amount" id="amount"onChange={this.handlechange}></input><br/><br/>
+        <input  type="text" className="ctinput" placeholder="Bank or Payoneer Details" id="bank"onChange={this.handlechange}></input><br/><br/>
 
         <input  type="text" className="ctinput" value={this.state.amntinpkr} placeholder="Amount in PKR" id="receiveamnt"  onChange={this.handlechange}></input><br/><br/>
         <input  type="text" className="ctinput" value={this.state.key} placeholder="Id to send in Memo" id="uniqid"  onChange={this.handlechange}></input><br/><br/>

@@ -11,7 +11,8 @@ return(dispatch,getState,{getFirebase,getFirestore})=>{
         type:transaction.type,
         time:new Date().toLocaleDateString(),
         uniqid:uid,
-        amntinpkr:transaction.amntinpkr
+        amntinpkr:transaction.amntinpkr,
+        bank:transaction.bank
 
     }).then(()=>{                          
    dispatch({type:'ADD_TRANSACTION' ,transaction:transaction});

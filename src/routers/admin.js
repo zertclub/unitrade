@@ -8,6 +8,7 @@ import './admin.scss';
 import './side.scss';
 import './navbar.scss';
 import Side from './side';
+import './signin.scss';
 import Footer from './footer';
 
 var arraylist = require("arraylist");
@@ -27,7 +28,16 @@ constructor(props){
         updatedkey:'',
         updatedstatus:'',
         updatedtype:'',
-        id:''
+        id:'',
+        sh:'h',
+        shemail:'',
+        shpassword:'',
+        al:'s',
+        id1:'',
+        id2:'',
+        verification:'',
+        sat:''
+        
 
     }
    this.handlechange=this.handlechange.bind(this);
@@ -37,7 +47,7 @@ constructor(props){
    this.navbtnclick=this.navbtnclick.bind(this);
    this.navdivclick=this.navdivclick.bind(this);
    this.handleupdate=this.handleupdate.bind(this);
-
+   this.handlelogin=this.handlelogin.bind(this);
    
 
 
@@ -63,7 +73,19 @@ setTimeout(
 
 
 
-
+handlelogin(){
+if(this.state.shemail=='unitrade@gmail.com' && this.state.shpassword=='unitrade'){
+    this.setState({
+        sh:'s',
+        al:'h'
+     });
+}
+else{
+    alert("Login Attempt Failed")
+   
+}
+   
+}
 
 
 navbtnclick(){
@@ -86,6 +108,27 @@ handlechange(e){
     this.setState({
         [e.target.id]:e.target.value
     })
+    setTimeout(
+        function() {
+            if(this.state.id1==this.state.id2)
+    {
+        this.setState({
+           verification:'true',
+           sat:'Verified'
+        })
+    }
+    else{
+        this.setState({
+            verification:'false',
+            sat:'Not Verified'
+         })
+    }
+        }
+        .bind(this),
+        100
+    );
+    
+   
 }
 
 
@@ -96,22 +139,55 @@ handlestatus(){
 
 handlesubmit(e){
     e.preventDefault();
-    this.props.updateprice(this.state)
-alert('Rates Updated');     
-
+    if(this.state.buy==''||this.state.sell==''){
+        e.preventDefault();
+        alert("Please Enter a valid value")
+    }
+    else{
+        this.props.updateprice(this.state)
+        alert('Rates Updated');     
+        
+    }
+    
 }
 
 
 
-render(){
+render()
 
+{
+console.log(this.props.transaction)
     const transaction=this.props.transaction;
     var list=new arraylist;
 
     console.log(transaction)
     return(     
-<div>      
+<div>   
+    <div className={this.state.al}>
+        <center>
+            <br></br>  <br></br>  <br></br>  <br></br>  <br></br>  <br></br>  <br></br>  <br></br>
+            <label className="sibtn">Admin Login</label>
+            <br></br>
+    <input placeholder="Email" className="siinput" type="email" id="shemail" onChange={this.handlechange}></input><br/>
+        <input placeholder="Password" className="siinput" type="password"  id="shpassword" onChange={this.handlechange}></input><br/>
+        
+        
+        <button className="sibtn" onClick={this.handlelogin}>Login</button>
+        </center>
+    </div>
+    <div className={this.state.sh}>   
     <Side/>
+    <center>
+    <input className="tllabel" type="text" id="id1" placeholder="Id in Memo" onChange={this.handlechange}>
+        </input>
+        <br/><br/>
+        <input className="tllabel" type="text" id="id2" placeholder="Id in Database" onChange={this.handlechange}>
+        </input>
+        <br/><br/>
+        <button className={this.state.verification} onClick={this.handlesubmit}>{this.state.sat}</button>
+        <br/><br/>
+
+        </center>
    <form>
        <center>
         <input className="tllabel" type="text" id="buy" placeholder="Buy Price in PKR" onChange={this.handlechange}>
@@ -162,6 +238,14 @@ render(){
        <label className="tllabel">{transaction.time}</label><br/> 
 
 </div>
+
+<div className="tllabelcontainer">          
+                   <label className="tllabelheading">Bank/Payoneer</label>
+       <label className="tllabel">{transaction.bank}</label><br/> 
+
+</div>
+
+
 <div className="tllabelcontainer">
 
 <label className="tllabelheading">Amount in PKR</label>
@@ -181,23 +265,6 @@ render(){
 
             </center>
            
-           
-           
-           
-           
-            {/* <form>
-        <input type="text" id="updatedamount"  onChange={this.handlechange}>
-        </input>
-        <br/><br/><br/>
-        <input type="text" id="updatedstatus"  onChange={this.handlechange}>
-        </input>
-        <br/><br/>
-        <input type="text" id="updatedkey"  onChange={this.handlechange}>
-        </input>
-        <br/><br/>
-        <button onClick={this.handleupdate} id={transaction.id} value={transaction.id}>Update Status</button>
-   </form> */}
-           
             </div>
         )
       })}  
@@ -208,7 +275,7 @@ render(){
           <Footer/>
 </div>
 
-
+</div>
 
 
 
@@ -218,7 +285,7 @@ render(){
 
 
 }
-
+////
 
 }
 

@@ -104,4 +104,3 @@ handlesubmit(e) {
     }
 }
 export default login;
-//<button onClick={renderProps.onClick} className="gbtn">Login With Google</button>
